@@ -1,0 +1,51 @@
+### npm i -y
+
+### npm i typescript @types/node -D
+
+### npx tsc --init
+
+
+student
+submission
+challenge
+correction
+resultado
+
+
+### npm i jest @swc/core  @swc/jest -D
+
+### npx jest --init
+
+### npm i ts-node -D
+`transform: {
+    "^.+\\.(t|j)sx?$": [
+      "@swc/jest", // Usando SWC como compilador/transpilador em vez de Babel para testes com Jest.
+      {
+        jsc: { // Configurações específicas para SWC (um compilador JavaScript/TypeScript).
+          parser: {
+            syntax: 'typescript', // Define o tipo de sintaxe que será usada, neste caso, TypeScript.
+            tsx: false, // Desabilita o suporte para arquivos TSX (React com TypeScript).
+            decorator: true, // Habilita o suporte para decoradores no TypeScript.
+          },
+          target: 'es2017', // Define o alvo da compilação, ou seja, o nível de compatibilidade com ECMAScript 2017.
+          keepClassNames: true, // Preserva o nome das classes após a transformação do código.
+          transform: {
+            legacyDecorator: true, // Habilita o suporte para decoradores no estilo legado (anterior ao TypeScript 5.0).
+            decoratorMetadata: true, // Gera metadados de decoradores para suporte a bibliotecas como NestJS.
+          },
+        },
+        module: {
+          type: 'es6', // Define o sistema de módulos como ECMAScript 6.
+          noInterop: false, // Permite a interoperabilidade entre módulos ES6 e CommonJS (ex: require).
+        },
+      },
+    ],
+  },
+`
+### npm i @types/jest -D
+
+### npm test
+
+### https://www.martinfowler.com/
+
+### https://martinfowler.com/bliki/InMemoryTestDatabase.html
